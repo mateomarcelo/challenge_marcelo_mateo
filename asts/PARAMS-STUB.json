@@ -1,0 +1,15 @@
+{
+    "programName": "PARAMS-STUB.",
+    "dataDivision": [],
+    "procedureDivision": [],
+    "sections": [
+        {
+            "sectionName": "WORKING-STORAGE",
+            "text": "WORKING-STORAGE SECTION."
+        },
+        {
+            "paragraphName": "GOBACK",
+            "text": "GOBACK."
+        }
+    ]
+}

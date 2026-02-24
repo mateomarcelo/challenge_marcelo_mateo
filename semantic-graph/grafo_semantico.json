@@ -1,0 +1,55 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "type": "copy",
+            "id": "ACCREC-STUB"
+        },
+        {
+            "type": "program",
+            "id": "CICBP02"
+        },
+        {
+            "type": "program",
+            "id": "UTLVAL01"
+        },
+        {
+            "type": "program",
+            "id": "COBAP01"
+        },
+        {
+            "type": "program",
+            "id": "PARAMS-STUB"
+        },
+        {
+            "type": "job",
+            "id": "COBAP01_JOB"
+        }
+    ],
+    "edges": [
+        {
+            "source": "CICBP02",
+            "target": "UTLVAL01"
+        },
+        {
+            "source": "COBAP01",
+            "target": "ACCREC-STUB"
+        },
+        {
+            "source": "COBAP01",
+            "target": "PARAMS-STUB"
+        },
+        {
+            "source": "COBAP01_JOB",
+            "target": "COBAP01"
+        },
+        {
+            "condition": "(0,NE)",
+            "explanation": "El paso se ejecuta solo si el return code es distinto de 0.",
+            "source": "COBAP01_JOB",
+            "target": "CICBP02"
+        }
+    ]
+}

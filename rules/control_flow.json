@@ -1,0 +1,11 @@
+{
+    "control_flow": [
+        {
+            "job": "COBAP01_JOB",
+            "step": "CICBSTEP",
+            "program": "CICBP02",
+            "condition": "(0,NE)",
+            "explanation": "El paso se ejecuta solo si el return code es distinto de 0."
+        }
+    ]
+}

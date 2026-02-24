@@ -1,0 +1,31 @@
+{
+    "jobName": "COBAP01",
+    "steps": [
+        {
+            "name": "STEP1",
+            "program": "COBAP01",
+            "condition": null,
+            "conditionExplanation": null,
+            "execType": "PGM",
+            "dd": [
+                {
+                    "name": "SYSOUT",
+                    "value": "SYSOUT=*"
+                }
+            ]
+        },
+        {
+            "name": "CICBSTEP",
+            "program": "CICBP02",
+            "condition": "(0,NE)",
+            "conditionExplanation": "El paso se ejecuta solo si el return code es distinto de 0.",
+            "execType": "PGM",
+            "dd": []
+        }
+    ],
+    "comments": [
+        "",
+        "Nota capciosa: la condici\u00c3\u00b3n impide CICBP02 si COBAP01 termin\u00c3\u00b3 OK.",
+        "El candidato debe detectarlo en el grafo de ejecuci\u00c3\u00b3n batch."
+    ]
+}

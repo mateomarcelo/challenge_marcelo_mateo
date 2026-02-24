@@ -1,0 +1,301 @@
+{
+    "programName": "COBAP01.",
+    "dataDivision": [
+        {
+            "level": "01",
+            "name": "ACC-REC-FILE.",
+            "usage": null,
+            "text": "01  ACC-REC-FILE."
+        },
+        {
+            "level": "01",
+            "name": "ACC-RECORD.",
+            "usage": null,
+            "text": "01  ACC-RECORD."
+        },
+        {
+            "level": "05",
+            "name": "ACC-NUMBER",
+            "usage": null,
+            "text": "05  ACC-NUMBER              PIC X(12)."
+        },
+        {
+            "level": "05",
+            "name": "ACC-TYPE",
+            "usage": null,
+            "text": "05  ACC-TYPE                PIC X."
+        },
+        {
+            "level": "88",
+            "name": "ACC-TYPE-CHECKING",
+            "usage": "LEVEL-88",
+            "text": "88  ACC-TYPE-CHECKING   VALUE 'C'."
+        },
+        {
+            "level": "88",
+            "name": "ACC-TYPE-SAVINGS",
+            "usage": "LEVEL-88",
+            "text": "88  ACC-TYPE-SAVINGS    VALUE 'S'."
+        },
+        {
+            "level": "05",
+            "name": "ACC-STATUS",
+            "usage": null,
+            "text": "05  ACC-STATUS              PIC X."
+        },
+        {
+            "level": "88",
+            "name": "ACC-OPEN",
+            "usage": "LEVEL-88",
+            "text": "88  ACC-OPEN            VALUE 'O'."
+        },
+        {
+            "level": "88",
+            "name": "ACC-CLOSED",
+            "usage": "LEVEL-88",
+            "text": "88  ACC-CLOSED          VALUE 'X'."
+        },
+        {
+            "level": "88",
+            "name": "ACC-BLOCKED",
+            "usage": "LEVEL-88",
+            "text": "88  ACC-BLOCKED         VALUE 'B'."
+        },
+        {
+            "level": "05",
+            "name": "ACC-BALANCE",
+            "usage": "COMP-3",
+            "text": "05  ACC-BALANCE             PIC S9(11)V99 COMP-3."
+        },
+        {
+            "level": "05",
+            "name": "ACC-OD-LIMIT",
+            "usage": "COMP-3",
+            "text": "05  ACC-OD-LIMIT            PIC S9(7)V99  COMP-3."
+        },
+        {
+            "level": "05",
+            "name": "ACC-RISK-RATING",
+            "usage": null,
+            "text": "05  ACC-RISK-RATING         PIC 9."
+        },
+        {
+            "level": "05",
+            "name": "ACC-FEES.",
+            "usage": null,
+            "text": "05  ACC-FEES."
+        },
+        {
+            "level": "10",
+            "name": "ACC-FEE",
+            "usage": null,
+            "text": "10  ACC-FEE OCCURS 0 TO 5 TIMES"
+        },
+        {
+            "level": "15",
+            "name": "ACC-FEE-CODE",
+            "usage": null,
+            "text": "15  ACC-FEE-CODE    PIC X(3)."
+        },
+        {
+            "level": "15",
+            "name": "ACC-FEE-AMOUNT",
+            "usage": "COMP-3",
+            "text": "15  ACC-FEE-AMOUNT  PIC S9(5)V99 COMP-3."
+        },
+        {
+            "level": "05",
+            "name": "ACC-FEE-COUNT",
+            "usage": null,
+            "text": "05  ACC-FEE-COUNT           PIC 9."
+        },
+        {
+            "level": "01",
+            "name": "WS-INT-RATE",
+            "usage": "COMP-3",
+            "text": "01  WS-INT-RATE           PIC S9(3)V9(5) COMP-3 VALUE +0.00150."
+        },
+        {
+            "level": "01",
+            "name": "WS-DATE",
+            "usage": null,
+            "text": "01  WS-DATE               PIC 9(8)."
+        },
+        {
+            "level": "01",
+            "name": "WS-ZERO",
+            "usage": null,
+            "text": "01  WS-ZERO               PIC S9(1) VALUE +0."
+        },
+        {
+            "level": "01",
+            "name": "WS-TMP",
+            "usage": null,
+            "text": "01  WS-TMP REDEFINES WS-ZERO."
+        },
+        {
+            "level": "05",
+            "name": "WS-TMP-BYTE",
+            "usage": null,
+            "text": "05 WS-TMP-BYTE        PIC X."
+        },
+        {
+            "level": "01",
+            "name": "WS-UNUSED-FLAG",
+            "usage": null,
+            "text": "01  WS-UNUSED-FLAG        PIC X VALUE 'N'.  *> Dead flag (capcioso)"
+        },
+        {
+            "level": "01",
+            "name": "PRM-FLAGS.",
+            "usage": null,
+            "text": "01  PRM-FLAGS."
+        },
+        {
+            "level": "05",
+            "name": "PRM-TEST-MODE",
+            "usage": null,
+            "text": "05  PRM-TEST-MODE        PIC X VALUE 'N'."
+        },
+        {
+            "level": "88",
+            "name": "PRM-TEST-YES",
+            "usage": "LEVEL-88",
+            "text": "88  PRM-TEST-YES     VALUE 'Y'."
+        },
+        {
+            "level": "05",
+            "name": "PRM-DATE-CUTOFF",
+            "usage": null,
+            "text": "05  PRM-DATE-CUTOFF      PIC 9(8)."
+        },
+        {
+            "level": "05",
+            "name": "PRM-ALLOW-NEGATIVE",
+            "usage": null,
+            "text": "05  PRM-ALLOW-NEGATIVE   PIC X VALUE 'N'."
+        },
+        {
+            "level": "88",
+            "name": "PRM-ALLOW-NEG",
+            "usage": "LEVEL-88",
+            "text": "88  PRM-ALLOW-NEG    VALUE 'Y'."
+        }
+    ],
+    "procedureDivision": [
+        {
+            "statementType": "PERFORM",
+            "text": "PERFORM 1000-INIT"
+        },
+        {
+            "statementType": "PERFORM",
+            "text": "PERFORM 2000-PROCESS UNTIL 3000-END-OF-FILE"
+        },
+        {
+            "statementType": "PERFORM",
+            "text": "PERFORM 9000-FINALIZE"
+        },
+        {
+            "statementType": "IF/ELSE",
+            "text": "IF PRM-TEST-YES"
+        },
+        {
+            "statementType": "IF/ELSE",
+            "text": "END-IF."
+        },
+        {
+            "statementType": "IF/ELSE",
+            "text": "IF 3000-END-OF-FILE = 1"
+        },
+        {
+            "statementType": "IF/ELSE",
+            "text": "END-IF"
+        },
+        {
+            "statementType": "IF/ELSE",
+            "text": "IF ACC-OPEN AND ACC-TYPE-SAVINGS"
+        },
+        {
+            "statementType": "ON SIZE ERROR",
+            "text": "ON SIZE ERROR"
+        },
+        {
+            "statementType": "IF/ELSE",
+            "text": "END-IF"
+        },
+        {
+            "statementType": "IF/ELSE",
+            "text": "IF (NOT PRM-ALLOW-NEG) AND (ACC-BALANCE < -ACC-OD-LIMIT)"
+        },
+        {
+            "statementType": "IF/ELSE",
+            "text": "END-IF"
+        },
+        {
+            "statementType": "IF/ELSE",
+            "text": "IF WS-TMP-BYTE = X'00'"
+        },
+        {
+            "statementType": "IF/ELSE",
+            "text": "END-IF."
+        }
+    ],
+    "sections": [
+        {
+            "sectionName": "INPUT-OUTPUT",
+            "text": "INPUT-OUTPUT SECTION."
+        },
+        {
+            "paragraphName": "FILE-CONTROL",
+            "text": "FILE-CONTROL."
+        },
+        {
+            "sectionName": "FILE",
+            "text": "FILE SECTION."
+        },
+        {
+            "sectionName": "WORKING-STORAGE",
+            "text": "WORKING-STORAGE SECTION."
+        },
+        {
+            "paragraphName": "0000-MAIN",
+            "text": "0000-MAIN."
+        },
+        {
+            "paragraphName": "GOBACK",
+            "text": "GOBACK."
+        },
+        {
+            "paragraphName": "1000-INIT",
+            "text": "1000-INIT."
+        },
+        {
+            "paragraphName": "2000-PROCESS",
+            "text": "2000-PROCESS."
+        },
+        {
+            "paragraphName": "2999-EXIT",
+            "text": "2999-EXIT."
+        },
+        {
+            "paragraphName": "EXIT",
+            "text": "EXIT."
+        },
+        {
+            "paragraphName": "3000-END-OF-FILE",
+            "text": "3000-END-OF-FILE."
+        },
+        {
+            "paragraphName": "EXIT",
+            "text": "EXIT."
+        },
+        {
+            "paragraphName": "9000-FINALIZE",
+            "text": "9000-FINALIZE."
+        },
+        {
+            "paragraphName": "EXIT",
+            "text": "EXIT."
+        }
+    ]
+}
