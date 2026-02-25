@@ -85,3 +85,8 @@ Notas finales
 Este README es una guía rápida para ejecutar y entender lo que se genera.
 Se adjunta el documento técnico que explica en detalle, con un lenguaje más ejecutivo,
 el ciclo SCLM y los errores comunes en cada etapa.
+
+Historial de cambios
+--------------------
+
+Consulta el archivo CHANGELOG.md para ver las actualizaciones realizadas en el Documento Técnico y otros componentes del proyecto.
